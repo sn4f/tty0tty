@@ -25,12 +25,15 @@ The tty0tty directory tree is divided in:
 
  The module is tested in kernel 3.10.2 (debian) 
 
-  When loaded, create 8 ttys interconnected:
+  When loaded, create 24*2 ttys interconnected:
   
   /dev/tnt0  <=>  /dev/tnt1  
   /dev/tnt2  <=>  /dev/tnt3  
-  /dev/tnt4  <=>  /dev/tnt5  
-  /dev/tnt6  <=>  /dev/tnt7  
+  ...
+  /dev/tnt[2n] <=> /dev/tnt[2n+1]
+  ...
+  /dev/tnt24  <=>  /dev/tnt25
+  
 
   the connection is:
   
@@ -47,14 +50,28 @@ The tty0tty directory tree is divided in:
 ## Requirements:
 
   For building the module kernel-headers or kernel source are necessary.
+  
+  * Get kernel-header for raspberry pi:
+    On this page: https://www.niksula.hut.fi/~mhiienka/Rpi/linux-headers-rpi/
+
+    Find the headers for your distribution: 
+    $ uname -r
+
+    (in this example 4.1.19-v7+)
+
+    $ wget https://www.niksula.hut.fi/~mhiienka/Rpi/linux-headers-rpi/linux-headers-4.1.19%2B_4.1.19%2B-2_armhf.deb
+
+    $ sudo dpkg -i *.deb
+    
+    Note: There may be some unmet dependencies, nevermind
 
 ## Installation:
 
 Download the tty0tty package from one of these sources:
-Clone the repo https://github.com/freemed/tty0tty
+Clone the repo https://github.com/garronej/tty0tty
 
 ```
-git clone https://github.com/freemed/tty0tty
+git clone https://github.com/garronej/tty0tty
 ```
 
 Extract it
