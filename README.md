@@ -51,19 +51,9 @@ The tty0tty directory tree is divided in:
 
   For building the module kernel-headers or kernel source are necessary.
   
-  * Get kernel-header for raspberry pi:
-    On this page: https://www.niksula.hut.fi/~mhiienka/Rpi/linux-headers-rpi/
-
-    Find the headers for your distribution: 
-    $ uname -r
-
-    (in this example 4.1.19-v7+)
-
-    $ wget https://www.niksula.hut.fi/~mhiienka/Rpi/linux-headers-rpi/linux-headers-4.1.19%2B_4.1.19%2B-2_armhf.deb
-
-    $ sudo dpkg -i *.deb
-    
-    Note: There may be some unmet dependencies, nevermind
+  Installing linux header for raspbian: 
+  
+  <script src="https://gist.github.com/garronej/551aa780f6b4f11788b791c6c578a0ed.js"></script>
 
 ## Installation:
 
