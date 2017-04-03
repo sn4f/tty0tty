@@ -53,7 +53,7 @@ The tty0tty directory tree is divided in:
   
   Installing linux header for raspbian: 
   
-  <script src="https://gist.github.com/garronej/551aa780f6b4f11788b791c6c578a0ed.js"></script>
+  https://gist.github.com/garronej/551aa780f6b4f11788b791c6c578a0ed
 
 ## Installation:
 
