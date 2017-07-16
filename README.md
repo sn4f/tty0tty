@@ -61,7 +61,8 @@ Download the tty0tty package from one of these sources:
 Clone the repo https://github.com/garronej/tty0tty
 
 ```
-sudo su && cd /usr/src
+sudo su
+cd /usr/src
 git clone https://github.com/garronej/tty0tty
 ```
 
