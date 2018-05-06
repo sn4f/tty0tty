@@ -37,10 +37,21 @@
 #include <linux/tty_driver.h>
 #include <linux/tty_flip.h>
 #include <linux/serial.h>
-#include <linux/sched.h>
+
 #include <linux/version.h>
 #include <asm/uaccess.h>
 
+
+/* 
+TODO: test with recent kernel, see if linux/sched.h should be included
+Fix ref: http://dpdk.org/dev/patchwork/patch/22003/ 
+*/
+
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 11, 0)
+#include <linux/sched/signal.h>
+#else
+#include <linux/sched.h>
+#endif
 
 #define DRIVER_VERSION "v1.2"
 #define DRIVER_AUTHOR "Luis Claudio Gamboa Lopes <lcgamboa@yahoo.com>"
